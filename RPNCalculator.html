@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<link href="RPNCalculator.css" rel="stylesheet" type="text/css">
+		<script src="RPNCalculator.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Quicksand:400' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="results">
+				<div class="wStack results-stack"><span style="text-align: left">w:</span><span class="wNum numStack" style="text-align: right"></span></div>
+				<div class="zStack results-stack"><span style="text-align: left">z:</span><span class="zNum numStack" style="text-align: right"></span></div>
+				<div class="yStack results-stack"><span style="text-align: left">y:</span><span class="yNum numStack" style="text-align: right"></span></div>
+				<div class="xStack results-stack"><span style="text-align: left">x:</span><span class="xNum numStack" style="text-align: right"></span></div>
+			</div>
+			<div class="number-container">
+				<table class="number-table">
+					<tr class="number-row">
+						<td class="number-cell">
+							<div class="number-button num" id="7" type="button">7</div>
+						</td>
+						<td class="number-cell">
+							<div class="number-button num" id="8" type="button">8</div>
+						</td>
+						<td class="number-cell">
+							<div class="number-button num" id="9" type="button">9</div>
+						</td>
+					</tr>
+					<tr class="number-row">
+						<td class="number-cell">
+							<div class="number-button num" id="4" type="button">4</div>
+						</td>
+						<td class="number-cell">
+							<div class="number-button num" id="5" type="button">5</div>
+						</td>
+						<td class="number-cell">
+							<div class="number-button num" id="6" type="button">6</div>
+						</td>
+					</tr>
+					<tr class="number-row">
+						<td class="number-cell">
+							<div class="number-button num" id="1" type="button">1</div>
+						</td>
+						<td class="number-cell">
+							<div class="number-button num" id="2" type="button">2</div>
+						</td>
+						<td class="number-cell">
+							<div class="number-button num" id="3" type="button">3</div>
+						</td>
+					</tr>
+					<tr class="number-row">
+						<td class="number-cell">
+							<div class="number-button num" id="0" type="button">0</div>
+						</td>
+						<td class="number-cell">
+							<div class="number-button" id="deci" type="button">.</div>
+						</td>
+						<td class="number-cell">
+							<div class="number-button" id="numSign" type="button">+/-</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="basic-container">
+				<table class="basic-table">
+					<tr class="basic-row">
+						<td class="basic-cell">
+							<div class="basic-button button" id="numEuler" type="button">e</div>
+						</td>
+						<td class="basic-cell">
+							<div class="basic-button button" id="numPi" type="button">&#960;</div>
+						</td>
+					</tr>
+					<tr class="basic-row">
+						<td class="basic-cell">
+							<div class="basic-button button" id="addition" type="button">+</div>
+						</td>
+						<td class="basic-cell">
+							<div class="basic-button button" id="subtraction" type="button">-</div>
+						</td>
+					</tr>
+					<tr class="basic-row">
+						<td class="basic-cell">
+							<div class="basic-button button" id="multiplication" type="button">X</div>
+						</td>
+						<td class="basic-cell">
+							<div class="basic-button button" id="division" type="button">&divide;</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="utilityOne-container">
+				<table class="utilityOne-table">
+					<tr class="utilityOne-row">
+						<td class="utilityOne-cell">
+							<div class="clear-button" id="clearAll" type="button">C</div>
+						</td>
+					</tr>
+					<tr class="utilityOne-row">
+						<td class="utilityOne-cell">
+							<div class="enter-button wide-button" id="delete" type="button">
+								<span class="fa fa-reply switch-text"></span>
+							</div>
+						</td>
+					</tr>
+					<tr class="utilityOne-row">
+						<td class="utilityOne-cell">
+							<div class="switch-button wide-button" id="switch" type="button">
+								<div class="switch-text">x</div>
+								<span class="fa fa-exchange switch-text"></span>
+								<div class="switch-text">y</div>
+							</div>
+						</td>
+					</tr>
+					<tr class="utilityOne-row">
+						<td class="utilityOne-cell">
+							<div class="enter-button wide-button" id="enter" type="button">Enter</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="function-container">
+				<table class="function-table">
+					<tr class="function-row">
+						<td class="function-cell">
+							<div class="function-button button" id="Euler-power" type="button">e<sup style="font-size: 16px;">x</sup></div>
+						</td>
+						<td class="function-cell">
+							<div class="function-button button" id="log-e" type="button">ln(x)</div>
+						</td>
+						<td class="function-cell">
+							<div class="function-button button" id="log-10" type="button">log(x)</div>
+						</td>
+					</tr>
+					<tr class="function-row">
+						<td class="function-cell">
+							<div class="function-button button" id="sin" type="button">sin(x)</div>
+						</td>
+						<td class="function-cell">
+							<div class="function-button button" id="cos" type="button">cos(x)</div>
+						</td>
+						<td class="function-cell">
+							<div class="function-button button" id="tan" type="button">tan(x)</div>
+						</td>
+					</tr>
+					<tr class="function-row">
+						<td class="function-cell">
+							<div class="function-button button" id="root" type="button">&nbsp;&#8730 <span id="root-text">&nbsp;x&nbsp;</span></div>
+						</td>
+						<td class="function-cell">
+							<div class="function-button button" id="power" type="button">y<sup style="font-size: 16px;">x</sup></div>
+						</td>
+						<td class="function-cell">
+							<div class="function-button button" id="scientific-E" type="button">E</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
