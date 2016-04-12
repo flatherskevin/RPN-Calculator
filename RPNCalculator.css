@@ -1,0 +1,300 @@
+/*RPNCalculator CSS*/
+
+html {
+	height: 100%;
+	margin: 0px;
+}
+
+body {
+	min-height: 100%;
+	overflow: hidden;
+	margin: 0px;
+}
+
+.container {
+	height: 500px;
+	width: 340px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	border-color: #ebe7e5 #7b7572 #494644 #ebe7e5;
+	border-style: solid;
+	border-width: 1px 7px 5px 1px;
+	background-color: #b8b8b8;
+	box-shadow: 10px 10px 35px #6d6a69;
+}
+
+.results {
+	height: 120px;
+	width: 324px;
+	position: relative;
+	top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #d8e56f;
+	border-color: #6d6a69 #7b7572 #ebe7e5 #494644;
+	border-width: 3px 2px 2px 3px;
+	border-style: solid;
+	box-shadow: inset 2px 2px 5px #7b7572;
+	outline: none;
+}
+
+.results-stack {
+	height: 25px;
+	width: 314px;
+	position: absolute;
+	left: 0px;
+	margin: 0px;
+	padding-left: 3px;
+	padding-right: 3px;
+	background-color: transparent;
+	border: none;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 25px;
+	color: #000000;
+	font-weight: 700;
+	line-height: 18px;
+}
+
+.wStack {
+	top: 4px;
+}
+
+.zStack {
+	top: 33px;
+}
+
+.yStack {
+	top: 62px;
+}
+
+.xStack {
+	top: 91px;
+}
+
+.xNum,.yNum,.zNum,.wNum {
+	position: absolute;
+	right: 0;
+}
+
+.number-container {
+	height: 200px;
+	width: 210px;
+	position: absolute;
+	left: 0px;
+	bottom: 3px;
+	margin: 0px;
+	background-color: transparent;
+}
+
+.number-table,.basic-table,.utilityOne-table,.function-table {
+	position: relative;
+	margin: auto;
+}
+
+.number-cell,.basic-cell,.function-cell {
+	height: 45px;
+	width: 60px;
+	position: relative;
+	margin: auto;
+	display: table-cell;
+}
+
+.utilityOne-cell {
+	height: 45px;
+	width: 120px;
+	position: relative;
+	margin: auto;
+	display: table-cell;
+}
+
+.number-row,.basic-row,.utilityOne-row,.function-row {
+	height: 45px;
+	position: relative;
+	margin: auto;
+}
+
+.button {
+	height: 30px;
+	width: 45px;
+	position: relative;
+	margin: auto;
+	background-color: #89a79b;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 25px;
+	color: #000000;
+	font-weight: 700;
+	line-height: 30px;
+	border-color: #ebe7e5 #7b7572 #7b7572 #ebe7e5;
+	border-width: 2px 2px 2px 2px;
+	border-style: solid;
+	outline: none;
+	cursor: pointer;
+}
+
+.wide-button {
+	height: 30px;
+	width: 109px;
+	position: relative;
+	margin: auto;
+	background-color: #89a79b;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 25px;
+	color: #000000;
+	font-weight: 700;
+	line-height: 30px;
+	text-align: center;
+	border-color: #ebe7e5 #7b7572 #7b7572 #ebe7e5;
+	border-width: 2px 2px 2px 2px;
+	border-style: solid;
+	outline: none;
+	cursor: pointer;
+}
+
+.number-button,.basic-button,.function-button {
+	position: relative;
+	text-align: center;
+}
+
+.number-button {
+	height: 30px;
+	width: 45px;
+	position: relative;
+	margin: auto;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 25px;
+	background-color: #343a64;
+	color: #fff;
+	font-weight: 700;
+	line-height: 30px;
+	border-color: #ebe7e5 #7b7572 #7b7572 #ebe7e5;
+	border-width: 2px 2px 2px 2px;
+	border-style: solid;
+	outline: none;
+	cursor: pointer;
+	
+}
+
+.clear-button {
+	height: 30px;
+	width: 109px;
+	position: relative;
+	margin: auto;
+	background-color: #f46666;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 25px;
+	color: #000000;
+	font-weight: 700;
+	line-height: 30px;
+	text-align: center;
+	border-color: #ebe7e5 #7b7572 #7b7572 #ebe7e5;
+	border-width: 2px 2px 2px 2px;
+	border-style: solid;
+	outline: none;
+	cursor: pointer;
+}
+
+.clear-button:active{
+	border-color: #7b7572 #d7cfcb #d7cfcb #7b7572;
+	background-color: #db5b5b;
+}
+
+.number-button:active{
+	border-color: #7b7572 #d7cfcb #d7cfcb #7b7572;
+	background-color: #292e50;
+	color: #f9f9f9;
+}
+
+.button:active,.wide-button:active {
+	border-color: #7b7572 #d7cfcb #d7cfcb #7b7572;
+	background-color: #7a9c8e;
+}
+
+.button-active {
+	border-color: #7b7572 #d7cfcb #d7cfcb #7b7572;
+	background-color: #b8afab;
+}
+
+.button,.wide-button,.number-button,.clear-button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.basic-container {
+	height: 149px;
+	width: 146px;
+	position: absolute;
+	right: 0px;
+	bottom: 5px;
+	margin: 0px;
+	background-color: transparent;
+}
+
+.utilityOne-container {
+	height: 200px;
+	width: 146px;
+	position: absolute;
+	right: 0px;
+	bottom: 150px;
+	margin: 0px;
+	background-color: transparent;
+}
+
+.switch-text {
+	display: inline-block;
+	margin-left: 3px;
+	margin-right: 3px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.fa-exchange {
+	height: 10px
+}
+
+.function-container {
+	height: 149px;
+	width: 210px;
+	position: absolute;
+	left: 0px;
+	bottom: 201px;
+	margin: 0px;
+	background-color: transparent;
+}
+
+#root-text {
+	border-color: #000000;
+	border-style: solid;
+	border-width: 1px 0 0 0;
+	white-space: nowrap;
+}
+
+#root {
+	letter-spacing: -4px;
+	text-align: left;
+	line-height: 35px;
+}
+
+#scientific-E {
+	font-size: 18px;
+}
+
+#sin,#cos,#tan,#log-e,#log-10 {
+	font-size: 13px;
+	text-align: center;
+}
+
+#Euler-power {
+	line-height: 16px;
+}
+
+#power {
+	line-height: 12px;
+}
